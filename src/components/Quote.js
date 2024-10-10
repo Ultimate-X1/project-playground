@@ -59,13 +59,13 @@ const QuoteMaster = () => {
                         
                     </div>
                 )} 
-                <button id="tweet-quote" style={{backgroundColor: currentColor}} >
-                    <a href="twitter.com/intent/tweet"><i className="fab fa-twitter"></i></a>
+                <button id="tweet-quote-btn" style={{backgroundColor: currentColor}} >
+                    <a id="tweet-quote" href="twitter.com/intent/tweet"><i className="fab fa-twitter"></i></a>
                 </button>
                 <button id="new-quote" style={{backgroundColor: currentColor}}  onClick={handleNewQuote}>New Quote</button>
 
             </div>
-            <div id="creator"><p >by Tyrese</p></div>
+            {/* <div id="creator"><p >by Tyrese</p></div> */}
         </div>
     );
 };
