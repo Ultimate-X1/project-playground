@@ -34,6 +34,7 @@ body{
     position:relative;
     @include border-radius(10px);
     padding: 40px 50px;
+    transition: color 1.5s ease, background-color 1.5s ease;
 }
 
 #tweet-quote{
@@ -43,10 +44,11 @@ body{
     float: left;
     margin-top: 30px;
     font-size: 25px;
+    transition: color 1.5s ease;
 }
 
 a{
-    color: grey;
+    color: white;
     text-align: center;
 }
 
@@ -57,7 +59,8 @@ a{
     float: right;
     margin-top: 30px;
     font-size: 13.6px;
-    color: gray;
+    color: white;
+    transition: color 1.5s ease;
 }
 
 
@@ -79,8 +82,16 @@ a{
 #author{
     text-align: right;
     margin:0;
+    transition: color 1.5s ease;
 }
 
 #author p {
     margin-top: 20px;
+}
+
+#creator {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }

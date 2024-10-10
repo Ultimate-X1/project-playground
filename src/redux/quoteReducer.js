@@ -2,7 +2,7 @@ import { CHANGE_QUOTE, CHANGE_COLOR } from "./quoteActions";
 
 const initialState = {
     randomQuote: null,
-    color: 'white'
+    currentColor: 'white'
 }
 
 const quoteReducer = (state=initialState, action) => {
@@ -16,7 +16,7 @@ const quoteReducer = (state=initialState, action) => {
         case CHANGE_COLOR:
             return{
                 ...state,
-                color: action.payload
+                currentColor: action.payload
             }
 
         default:

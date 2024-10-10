@@ -7,7 +7,7 @@ import { changeColor } from "../redux/quoteActions";
 const QuoteMaster = () => {
     const dispatch = useDispatch();
     const randomQuote = useSelector((state)=> state.quotes.randomQuote);
-    
+    const currentColor = useSelector((state) => state.quotes.currentColor);
 
     const colors = [ 
     '#16a085',
@@ -27,6 +27,7 @@ const QuoteMaster = () => {
     //Generate a random quote when the component mounts
     useEffect(() => {
         dispatch(changeQuote());
+        handleChangeColor();
     }, [dispatch]);
     
 
@@ -47,23 +48,24 @@ const QuoteMaster = () => {
         <div >
             <div id="quote-box">
                 {randomQuote && (
-                    <>
-                        <div id="text">
-                          <i className="fa fa-quote-left quote-mark"></i>
-                            <span>"{randomQuote.quote}"</span>  
+                    <div style={{color: currentColor}}>
+                        <div id="text" >
+                          <i className="fa fa-quote-left quote-mark"  ></i>
+                            <span >"{randomQuote.quote}"</span>  
                         </div>
                         <div id="author">
-                          <p>-- {randomQuote.author}</p>  
+                          <p >-- {randomQuote.author}</p>  
                         </div>
                         
-                    </>
+                    </div>
                 )} 
-                <button id="tweet-quote" >
+                <button id="tweet-quote" style={{backgroundColor: currentColor}} >
                     <a href="twitter.com/intent/tweet"><i className="fab fa-twitter"></i></a>
                 </button>
-                <button id="new-quote"  onClick={handleNewQuote}>New Quote</button>
+                <button id="new-quote" style={{backgroundColor: currentColor}}  onClick={handleNewQuote}>New Quote</button>
 
             </div>
+            <div id="creator"><p >by Tyrese</p></div>
         </div>
     );
 };
