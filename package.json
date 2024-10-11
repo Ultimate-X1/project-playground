@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/Ultimate-X1/project-playground",
+  "homepage": "https://Ultimate-X1.github.io/project-playground",
   "name": "random-quote-generator",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +26,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
